@@ -9,20 +9,21 @@ def index():
     View root page function that returns the index page and its data
     '''
 
-    # Getting popular movie
+    # Getting popular news
     popular_news = get_news('popular')
-    print(popular_news)
-    title = 'news1234.com'
-    return render_template('index.html', title = title,popular = popular_news)
+    upcoming_news = get_news('upcoming')
+    now_showing_news = get_news('now_playing')
+    title = 'Home - Welcome to The best Movie Review Website Online'
+    return render_template('index.html', title = title, popular = popular_news, upcoming = upcoming_news, now_showing = now_showing_news )
 
 
-# Views
-@app.route('/')
-def news():
-
-    '''
-    View movie page function that returns the movie details page and its data
-    '''
-
-    title = 'news1234.com'
-    return render_template('index.html',title = title)
+# # Views
+# @app.route('/')
+# def news():
+#
+#     '''
+#     View news page function that returns the news details page and its data
+#     '''
+#
+#     title = 'news1234.com'
+#     return render_template('index.html',title = title)

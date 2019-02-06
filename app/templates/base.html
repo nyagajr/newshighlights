@@ -1,3 +1,8 @@
+{% extends 'bootstrap/base.html'%}
+<!-- Navbar block  -->
+{% block navbar %}
+    {% include 'navbar.html' %}
+{% endblock %}
 <!DOCTYPE html>
 <html>
     <head>
@@ -24,7 +29,7 @@
               {{macro.displayNewsList(upcoming)}}
           </ul>
           <!-- Now showing news -->
-          <!-- <h3>Now Showing</h3>
+          <h3>Now Showing</h3>
            <ul>
               {{macro.displayNewsList(now_showing)}}
           </ul>
